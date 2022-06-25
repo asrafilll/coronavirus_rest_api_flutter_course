@@ -1,4 +1,5 @@
 import 'package:coronavirus_rest_api_flutter_course/app/service/api_keys.dart';
+import 'package:flutter/foundation.dart';
 
 enum Endpoint {
   cases,
@@ -9,7 +10,7 @@ enum Endpoint {
 }
 
 class API {
-  API({required this.apiKey});
+  API({@required this.apiKey});
   final String apiKey;
 
   factory API.sandbox() => API(apiKey: APIKeys.ncovSandboxKey);
