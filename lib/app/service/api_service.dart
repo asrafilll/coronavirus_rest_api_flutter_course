@@ -5,8 +5,8 @@ import 'api.dart';
 import 'package:http/http.dart' as http;
 
 class APIService {
-  final API api;
   APIService(this.api);
+  final API api;
 
   Future<String> getAccessToken() async {
     final response = await http.post(
@@ -20,8 +20,6 @@ class APIService {
         return accessToken;
       }
     }
-    // print(
-    //     'Request ${api.tokenUri()} failed\nResponse: ${response.statusCode} ${response.reasonPhrase}');
     throw response;
   }
 
@@ -43,8 +41,6 @@ class APIService {
         return result;
       }
     }
-    // print(
-    //     'Request ${api.tokenUri()} failed\nResponse: ${response.statusCode} ${response.reasonPhrase}');
     throw response;
   }
 

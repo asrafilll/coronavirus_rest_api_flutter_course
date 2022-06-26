@@ -14,7 +14,6 @@ class API {
   final String apiKey;
 
   factory API.sandbox() => API(apiKey: APIKeys.ncovSandboxKey);
-  factory API.production() => API(apiKey: APIKeys.ncovProdKey);
 
   static const String host = 'ncov2019-admin.firebaseapp.com';
 
@@ -32,8 +31,8 @@ class API {
 
   static final Map<Endpoint, String> _paths = {
     Endpoint.cases: 'cases',
-    Endpoint.casesConfirmed: 'casesConfirmed',
     Endpoint.casesSuspected: 'casesSuspected',
+    Endpoint.casesConfirmed: 'casesConfirmed',
     Endpoint.deaths: 'deaths',
     Endpoint.recovered: 'recovered',
   };
